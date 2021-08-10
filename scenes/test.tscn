@@ -30,39 +30,39 @@ height = 0.270702
 depth = 66.1948
 
 [node name="CSGBox2" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( 0.824304, 0, -0.566147, 0, 1, 0, 0.566147, 0, 0.824304, 19.6276, 2.89627, 22.162 )
+transform = Transform( 0.824304, 0, -0.566147, 0, 1, 0, 0.566147, 0, 0.824304, -9.65242, 3.92591, 22.162 )
 width = 18.41
 height = 7.85876
 depth = 1.5457
 
 [node name="CSGBox6" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( 0.417535, -0.862222, -0.286771, -0.274203, 0.181326, -0.944422, 0.866301, 0.472963, -0.160714, -18.5372, 0.221099, 9.25818 )
+transform = Transform( 0.417535, -0.862222, -0.286771, -0.274203, 0.181326, -0.944422, 0.866301, 0.472963, -0.160714, -18.5372, 0.221099, -16.9651 )
 width = 18.41
 height = 7.85876
 depth = 1.5457
 material = SubResource( 1 )
 
 [node name="CSGBox7" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( -0.618101, -0.785577, 0.0286305, -0.274203, 0.181326, -0.944422, 0.736725, -0.591599, -0.327485, -18.5372, -3.4173, -5.94577 )
+transform = Transform( -0.618101, -0.785577, 0.0286305, -0.274203, 0.181326, -0.944422, 0.736725, -0.591599, -0.327485, 18.4385, -0.407789, -5.94577 )
 width = 18.41
 height = 7.85876
 depth = 7.36578
 material = SubResource( 2 )
 
 [node name="CSGBox5" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.11564, 1.79333, 6.2761 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.11564, 1.79333, 14.4031 )
 width = 10.6455
 height = 7.85876
 depth = 1.5457
 
 [node name="CSGBox3" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( 0.0188135, 0, -0.999823, 0, 1, 0, 0.999823, 0, 0.0188135, -6.11564, 1.79333, -8.03892 )
+transform = Transform( 0.0188135, 0, -0.999823, 0, 1, 0, 0.999823, 0, 0.0188135, -29.8093, 1.79333, -8.03892 )
 width = 10.6455
 height = 7.85876
 depth = 1.5457
 
 [node name="CSGBox4" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( 0.576447, 0, -0.817135, 0, 1, 0, 0.817135, 0, 0.576447, 8.22092, 1.79333, -8.03892 )
+transform = Transform( 0.576447, 0, -0.817135, 0, 1, 0, 0.817135, 0, 0.576447, 24.4288, 1.79333, 3.63858 )
 width = 10.6455
 height = 7.85876
 depth = 1.5457

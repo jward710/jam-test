@@ -1,0 +1,173 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://materials/testing_room_mat1.tres" type="Material" id=1]
+[ext_resource path="res://scenes/Entitys/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://PNG/Orange/texture_10.png" type="Texture" id=3]
+[ext_resource path="res://PNG/Dark/texture_09.png" type="Texture" id=4]
+
+[sub_resource type="SpatialMaterial" id=6]
+flags_world_triplanar = true
+albedo_texture = ExtResource( 4 )
+uv1_triplanar = true
+
+[sub_resource type="SpatialMaterial" id=7]
+flags_world_triplanar = true
+albedo_texture = ExtResource( 4 )
+uv1_triplanar = true
+
+[sub_resource type="SpatialMaterial" id=4]
+flags_world_triplanar = true
+albedo_texture = ExtResource( 3 )
+uv1_triplanar = true
+
+[sub_resource type="SpatialMaterial" id=5]
+flags_world_triplanar = true
+albedo_texture = ExtResource( 3 )
+uv1_triplanar = true
+
+[sub_resource type="ProceduralSky" id=2]
+sky_top_color = Color( 0.643137, 0.917647, 1, 1 )
+sky_horizon_color = Color( 0.819608, 0.94902, 1, 1 )
+sky_curve = 0.000703125
+ground_bottom_color = Color( 0.188235, 0.188235, 0.188235, 1 )
+ground_horizon_color = Color( 0.521569, 0.521569, 0.521569, 1 )
+ground_curve = 0.000185814
+
+[sub_resource type="Environment" id=3]
+background_mode = 2
+background_sky = SubResource( 2 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="CSGCombiner" type="CSGCombiner" parent="."]
+use_collision = true
+
+[node name="Ground" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -5, 0 )
+width = 128.0
+height = 10.0
+depth = 128.0
+material = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Pitfall" type="CSGBox" parent="CSGCombiner/Ground"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 3, -20 )
+operation = 2
+calculate_tangents = false
+width = 16.0
+height = 4.0
+depth = 22.0
+material = SubResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Pitfall2" type="CSGBox" parent="CSGCombiner/Ground"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 4, -24 )
+operation = 2
+calculate_tangents = false
+width = 4.0
+depth = 4.0
+material = SubResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Platform" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -10 )
+width = 4.0
+depth = 4.0
+material = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Platform2" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -14 )
+width = 4.0
+height = 4.0
+depth = 4.0
+material = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Platform3" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -22 )
+width = 4.0
+height = 6.0
+depth = 12.0
+material = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Platform6" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 4, -5 )
+width = 4.0
+height = 8.0
+depth = 10.0
+material = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Platform4" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -34 )
+width = 4.0
+height = 4.0
+depth = 4.0
+material = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Platform5" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 6, -42 )
+width = 12.0
+height = 4.0
+depth = 4.0
+material = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Platform7" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 4, -20 )
+height = 8.0
+depth = 24.0
+material = SubResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Platform8" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 4, -20 )
+height = 8.0
+depth = 24.0
+material = SubResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Walls" type="Spatial" parent="CSGCombiner"]
+
+[node name="Obsticals" type="Spatial" parent="CSGCombiner"]
+
+[node name="CSGPolygon" type="CSGPolygon" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 0 )
+polygon = PoolVector2Array( -6, 0, -6, 8, 0, 2, 7, 0 )
+depth = 10.0
+material = ExtResource( 1 )
+
+[node name="Sun" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.730389, 0.683032, 0, -0.683032, -0.730389, 0, 24.1698, -27.8856 )
+shadow_enabled = true
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = SubResource( 3 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )

@@ -1,31 +1,25 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://materials/testing_room_mat1.tres" type="Material" id=1]
 [ext_resource path="res://scenes/Entitys/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://PNG/Orange/texture_10.png" type="Texture" id=3]
-[ext_resource path="res://PNG/Dark/texture_09.png" type="Texture" id=4]
 
-[sub_resource type="SpatialMaterial" id=6]
+[sub_resource type="SpatialMaterial" id=1]
 flags_world_triplanar = true
-albedo_texture = ExtResource( 4 )
 uv1_triplanar = true
 
-[sub_resource type="SpatialMaterial" id=7]
+[sub_resource type="SpatialMaterial" id=2]
 flags_world_triplanar = true
-albedo_texture = ExtResource( 4 )
+uv1_triplanar = true
+
+[sub_resource type="SpatialMaterial" id=3]
+flags_world_triplanar = true
 uv1_triplanar = true
 
 [sub_resource type="SpatialMaterial" id=4]
 flags_world_triplanar = true
-albedo_texture = ExtResource( 3 )
 uv1_triplanar = true
 
-[sub_resource type="SpatialMaterial" id=5]
-flags_world_triplanar = true
-albedo_texture = ExtResource( 3 )
-uv1_triplanar = true
-
-[sub_resource type="ProceduralSky" id=2]
+[sub_resource type="ProceduralSky" id=5]
 sky_top_color = Color( 0.643137, 0.917647, 1, 1 )
 sky_horizon_color = Color( 0.819608, 0.94902, 1, 1 )
 sky_curve = 0.000703125
@@ -33,9 +27,9 @@ ground_bottom_color = Color( 0.188235, 0.188235, 0.188235, 1 )
 ground_horizon_color = Color( 0.521569, 0.521569, 0.521569, 1 )
 ground_curve = 0.000185814
 
-[sub_resource type="Environment" id=3]
+[sub_resource type="Environment" id=6]
 background_mode = 2
-background_sky = SubResource( 2 )
+background_sky = SubResource( 5 )
 
 [node name="Spatial" type="Spatial"]
 
@@ -59,7 +53,7 @@ calculate_tangents = false
 width = 16.0
 height = 4.0
 depth = 22.0
-material = SubResource( 6 )
+material = SubResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -70,7 +64,7 @@ operation = 2
 calculate_tangents = false
 width = 4.0
 depth = 4.0
-material = SubResource( 7 )
+material = SubResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -138,7 +132,7 @@ __meta__ = {
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 4, -20 )
 height = 8.0
 depth = 24.0
-material = SubResource( 4 )
+material = SubResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -147,7 +141,7 @@ __meta__ = {
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 4, -20 )
 height = 8.0
 depth = 24.0
-material = SubResource( 5 )
+material = SubResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -167,7 +161,7 @@ transform = Transform( 1, 0, 0, 0, -0.730389, 0.683032, 0, -0.683032, -0.730389,
 shadow_enabled = true
 
 [node name="Environment" type="WorldEnvironment" parent="."]
-environment = SubResource( 3 )
+environment = SubResource( 6 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )

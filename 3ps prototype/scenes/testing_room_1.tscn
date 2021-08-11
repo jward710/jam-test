@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://materials/testing_room_mat1.tres" type="Material" id=1]
 [ext_resource path="res://scenes/Entitys/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Weapons/sword_v001.glb" type="PackedScene" id=3]
 
 [sub_resource type="SpatialMaterial" id=1]
 flags_world_triplanar = true
@@ -165,3 +166,6 @@ environment = SubResource( 6 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+
+[node name="sword_v001" parent="." instance=ExtResource( 3 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 6.58012, 1.79577, -4.15988 )

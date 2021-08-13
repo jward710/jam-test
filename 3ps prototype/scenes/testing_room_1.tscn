@@ -166,10 +166,10 @@ shadow_enabled = true
 environment = SubResource( 6 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.38339, 23.9514, -6.55705 )
 
 [node name="sword_v001" parent="." instance=ExtResource( 3 )]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 6.58012, 1.79577, -4.15988 )
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 6.56391, 1.97482, 17.8665 )
 
 [node name="crazy dog thing" parent="sword_v001" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.58106, -1.218, 0.277008 )
